@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dev Board</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      .global_bg {
+        background-color: #f4f7ff;
+      }
+      .text_color{
+        color: #00303C;
+      }
+      .acent{
+        background-color: #3752FD;
+      }
+    </style>
+  </head>
+  <body class="global_bg" id="body_theme">
+    <!-- Header and Nav Part -->
+    <header class="pt-5">
+      <nav class="navbar bg-base-100 rounded-xl container mx-auto">
+        <div class="navbar-start">
+          <div class="dropdown">
+            <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                class="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
+                />
+              </svg>
+            </div>
+          </div>
+          <a class="btn btn-ghost text-xl"
+            ><img src="assets/logo and name.png" alt="" class="w-44"
+          /></a>
+        </div>
+        <div class="navbar-end">
+          <div
+            class="task_done flex gap-2 mr-10 font-bold bg text-lg global_bg px-4 py-2 rounded-full"
+          >
+            <img src="assets/checkbox.png" alt="" />
+            <span class="text_color" id="completed_task">23</span>
+          </div>
+          <button class="cursor-pointer global_bg w-12 flex justify-center items-center p-2 rounded-full" id="change_theme_btn">
+            <img src="assets/theme-btn.png" alt="" class="w-12" />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+
+    <!-- Main Part -->
+
+
+    <main class="mt-5">
+     <div class="section_container container mx-auto flex justify-between items-center">
+
+      <!-- Content Section -->
+      <section class="content_section bg-white w-4/5 rounded-xl h-[115vh]">
+        <div class="hero_secton flex justify-between items-center p-5 pb-2">
+          <div class=" flex justify-center items-center gap-2 w-[22%] global_bg py-5 rounded-xl">
+              <div class="assigned_task_logo bg-white p-2 w-11 rounded-xl flex justify-center items-center">
+                <img src="assets/checkbox.png" alt="" class="w-8">
+              </div>
+            <div class="details">
+              <p class="text-xs opacity-50">Task Assigned</p>
+              <h2 class="text-lg text_color font-bold" id="assigned_task">06</h2>
+            </div>
+          </div>
+          <div class="blog_content flex justify-center w-[52%] items-center gap-8 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl py-[10px] cursor-pointer" id="blog_card">
+            <img src="assets/board.png" alt="" class="w-16">
+            <h2 class="text-white text-lg">Discover Something <br> New Today!</h2>
+          </div>
+          <div class="calender global_bg flex justify-center items-center gap-2 w-[22%] py-5 rounded-xl">
+            <div class="assigned_task_logo bg-white p-2 w-11 rounded-xl flex justify-center items-center">
+              <img src="assets/calender.png" alt="" class="w-8">
+            </div>
+            <div class="date_time">
+              <p class="text-xs opacity-50" id="current_day">Wed</p>
+              <h2 class="text-lg text_color font-bold" id="current_date">Jul 28 2025 </h2>
+            </div>
+          </div>
+        </div>
+        <hr class="border-dashed mt-3">
+
+        <!-- Card Section -->
+
+
+
+
+        <div class="card_section bg-white mt-8 grid grid-cols-3 gap-5 p-5 pt-0">
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">ShopEase</span>
+            <h2 class="text_color card_title font-bold text-xl">Fix Mobile Button Issue </h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">CloudSync</span>
+            <h2 class="text_color card_title font-bold text-xl">Add Dark Mode </h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Store the user's preference in localStorage, update CSS varia</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">SwiftPay</span>
+            <h2 class="text_color card_title font-bold text-xl">Optimize  Home page  </h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">Meta</span>
+            <h2 class="text_color card_title font-bold text-xl">Add new emoji</h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">Google LLC</span>
+            <h2 class="text_color card_title font-bold text-xl">Integrate OpenAI API  </h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+          <div class="card global_bg space-y-4 p-5">
+            <span class="bg-white w-28 text-center p-2 rounded-xl">Glassdoar</span>
+            <h2 class="text_color card_title font-bold text-xl">Improve Job searching  </h2>
+            <p class="bg-white w-[98%] p-4 rounded-xl text-sm text-gray-500">Debug using Chrome DevTools, check for overlappin</p>
+            <div class="action flex justify-between items-center">
+              <div class="deadline">
+                <p class="text-xs opacity-50">Deadline</p>
+                <h2 class="font-bold">21 March 2025</h2>
+              </div>
+              <button class="btn completed_btn acent text-white">Completed</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Aside section -->
+      <section class="aside_section bg-white w-[18%] h-[115vh] p-4 rounded-xl" id="message_section">
+        <div class="activities_control flex flex-col justify-center items-center gap-3">
+          <div class="activity_log flex justify-center items-center gap-3">
+            <img src="assets/activity.png" alt="">
+            <p>Activity Log</p>
+          </div>
+          <button class="btn acent text-white" id="clear_btn">Clear History</button>
+        </div>
+          <div id="messages">
+            <!-- <p class="text-xs text-gray-500 activities_message global_bg p-2 rounded-xl mt-5" id="message" >You have Complete The Task Add Dark Mode at 12:48:15 PM</p> -->
+          </div>
+        </div>
+      </section>
+     </div>
+    </main>
+
+
+
+
+
+
+
+    <script src="scripts/script.js"></script>
+  </body>
+</html>

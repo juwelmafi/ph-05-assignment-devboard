@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dev Board</title>
+  <link
+  href="https://cdn.jsdelivr.net/npm/daisyui@4.12.24/dist/full.min.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<script src="https://cdn.tailwindcss.com"></script>
+<style>
+  .global_bg {
+    background-color: #f4f7ff;
+  }
+  .text_color{
+    color: #00303C;
+  }
+  .acent{
+    background-color: #3752FD;
+  }
+</style>
+</head>
+<body class="global_bg">
+  <header class="pt-5 px-5">
+    <nav class="navbar bg-base-100 rounded-xl container mx-auto">
+      <div class="navbar-start">
+        <div class="dropdown">
+          <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="h-5 w-5"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M4 6h16M4 12h8m-8 6h16"
+              />
+            </svg>
+          </div>
+        </div>
+        <a class="btn btn-ghost text-xl"
+          ><img src="assets/logo and name.png" alt="" class="w-44"
+        /></a>
+      </div>
+      <div class="navbar-end">
+        <button class="btn acent text-white font-semibold" id="back_btn">Back To Desk</button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main class="container mx-auto mt-5 px-5 md:px-0">
+    <div class="blog_container space-y-4">
+      <h2 class="font-bold text-xl text-center">Blogs</h2>
+      <div class="blog bg-white p-5 space-y-3 rounded-lg">
+        <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-1: What are the different ways to select an element in the DOM?</h2>
+        <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">We can select a DOM element using getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll(), depending on ID, class, or tag.</p>
+      </div>
+      <div class="blog bg-white p-5 space-y-3 rounded-lg">
+        <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-2: What is the difference between innerHTML, innerText, and textContent ?</h2>
+        <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">The innerHTML property returns or sets HTML content inside an element, with tags. And innerText shows only visible text, ignores the tag. The textContent returns all text within an element, including hidden content, without formatting.</p>
+      </div>
+      <div class="blog bg-white p-5 space-y-3 rounded-lg">
+        <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-3: What is event delegation in the DOM?</h2>
+        <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">Event delegation is a technique in the DOM where a parent element handles events for its child elements using event bubbling. Instead of adding event listeners to multiple child elements, we attach a single listener. When an event occurs on a child, it bubbles up to the parent.</p>
+      </div>
+      <div class="blog bg-white p-5 space-y-3 rounded-lg">
+        <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-4: What is event bubbling in the DOM?</h2>
+        <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">Event bubbling in the DOM is a process where an event starts from the target element and propagates up through its parent elements. When an event occurs on a child element, it first apply on that element, then bubbles up.</p>
+      </div>
+      <div class="blog bg-white p-5 space-y-3 rounded-lg">
+        <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+        <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">To create an element, we use document.createElement(), it generates a new HTML element. To add it to the DOM, we use appendChild() or append() to insert it at the end of a parent element. If we need to remove an element, we use remove(), or removeChild().</p>
+      </div>
+    </div>
+  </main>
+
+
+
+
+<script src="scripts/blog.js"></script>
+</body>
+</html>
