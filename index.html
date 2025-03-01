@@ -44,10 +44,16 @@
                 />
               </svg>
             </div>
+            <ul
+        tabindex="0"
+        class="menu menu-sm dropdown-content bg-base-100 rounded-box z-1 mt-3 w-52 p-2 shadow">
+        <li><a class="font-bold"src="blog.html">Blog</a></li>
+      </ul>
           </div>
-          <a class="btn btn-ghost text-xl"
-            ><img src="assets/logo and name.png" alt="" class="w-44"
-          /></a>
+          <a class="btn btn-ghost text-xl">
+            <img src="assets/logo and name.png" alt="" class="w-44 hidden md:block"/>
+            <img src="assets/logo.png" alt="" class="md:hidden w-10">
+        </a>
         </div>
         <div class="navbar-end">
           <div
@@ -68,12 +74,12 @@
 
 
     <main class="mt-5">
-     <div class="section_container container mx-auto flex justify-between items-center">
+     <div class="section_container container mx-auto md:flex justify-between items-center">
 
       <!-- Content Section -->
-      <section class="content_section bg-white w-4/5 rounded-xl h-[115vh]">
-        <div class="hero_secton flex justify-between items-center p-5 pb-2">
-          <div class=" flex justify-center items-center gap-2 w-[22%] global_bg py-5 rounded-xl">
+      <section class="content_section bg-white w-full md:w-4/5 rounded-xl md:h-[115vh]">
+        <div class="hero_secton flex flex-col md:flex-row justify-between items-center p-5 pb-2 gap-4 md:gap-0">
+          <div class=" flex justify-center items-center gap-2 w-full md:w-[22%] global_bg py-5 rounded-xl">
               <div class="assigned_task_logo bg-white p-2 w-11 rounded-xl flex justify-center items-center">
                 <img src="assets/checkbox.png" alt="" class="w-8">
               </div>
@@ -82,11 +88,11 @@
               <h2 class="text-lg text_color font-bold" id="assigned_task">06</h2>
             </div>
           </div>
-          <div class="blog_content flex justify-center w-[52%] items-center gap-8 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl py-[10px] cursor-pointer" id="blog_card">
+          <div class="blog_content flex justify-center w-full md:w-[52%] items-center gap-8 bg-gradient-to-r from-[#3752FD] to-[#9BA8F8] rounded-xl py-[10px] cursor-pointer" id="blog_card">
             <img src="assets/board.png" alt="" class="w-16">
             <h2 class="text-white text-lg">Discover Something <br> New Today!</h2>
           </div>
-          <div class="calender global_bg flex justify-center items-center gap-2 w-[22%] py-5 rounded-xl">
+          <div class="calender global_bg flex justify-center items-center gap-2 w-full md:w-[22%] py-5 rounded-xl">
             <div class="assigned_task_logo bg-white p-2 w-11 rounded-xl flex justify-center items-center">
               <img src="assets/calender.png" alt="" class="w-8">
             </div>
@@ -103,7 +109,7 @@
 
 
 
-        <div class="card_section bg-white mt-8 grid grid-cols-3 gap-5 p-5 pt-0">
+        <div class="card_section bg-white mt-8 grid grid-cols-1 md:grid-cols-3 gap-5 p-5 pt-0">
           <div class="card global_bg space-y-4 p-5">
             <span class="bg-white w-28 text-center p-2 rounded-xl">ShopEase</span>
             <h2 class="text_color card_title font-bold text-xl">Fix Mobile Button Issue </h2>
@@ -181,7 +187,7 @@
 
 
       <!-- Aside section -->
-      <section class="aside_section bg-white w-[18%] h-[115vh] p-4 rounded-xl" id="message_section">
+      <section class="aside_section bg-white w-full md:w-[18%] md:h-[115vh] p-4 rounded-xl" id="message_section">
         <div class="activities_control flex flex-col justify-center items-center gap-3">
           <div class="activity_log flex justify-center items-center gap-3">
             <img src="assets/activity.png" alt="">

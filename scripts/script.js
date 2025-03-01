@@ -22,7 +22,7 @@ currentDate.innerText = finalDate;
 
 const day = new Date();
 const dayOfWeek = day.getDay();
-const arrayOfDay = ['Sat', 'Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
+const arrayOfDay = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
 const finalDay = arrayOfDay[dayOfWeek];
 currentDay.innerText = finalDay;
 
