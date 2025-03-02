@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en data-theme="light"">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -44,9 +44,10 @@
             </svg>
           </div>
         </div>
-        <a class="btn btn-ghost text-xl"
-          ><img src="assets/logo and name.png" alt="" class="w-44"
-        /></a>
+        <a class="btn btn-ghost text-xl">
+          <img src="assets/logo and name.png" alt="" class="w-44 hidden md:block"/>
+          <img src="assets/logo.png" alt="" class="md:hidden w-10">
+      </a>
       </div>
       <div class="navbar-end">
         <button class="btn acent text-white font-semibold" id="back_btn">Back To Desk</button>
@@ -57,7 +58,7 @@
 
   <main class="container mx-auto mt-5 px-5 md:px-0">
     <div class="blog_container space-y-4">
-      <h2 class="font-bold text-xl text-center">Blogs</h2>
+      <h2 class="font-bold text-xl text-center text_color">Blogs</h2>
       <div class="blog bg-white p-5 space-y-3 rounded-lg">
         <h2 class="text-xl font-semibold text_color border-b border-dashed pb-3">Question-1: What are the different ways to select an element in the DOM?</h2>
         <p class="text-sm text-gray-500 w-[98%] md:w-4/6 ">We can select a DOM element using getElementById(), getElementsByClassName(), getElementsByTagName(), querySelector(), and querySelectorAll(), depending on ID, class, or tag.</p>
