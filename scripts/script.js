@@ -68,7 +68,8 @@ for (button of completedBtn) {
 
 const activitiesMessage = document.querySelectorAll('.activities_message');
 const clearBtn = document.getElementById('clear_btn').addEventListener('click', function(){
-  messages.classList.add('hidden');
+messages.innerHTML = '';
+
 
 })
   
